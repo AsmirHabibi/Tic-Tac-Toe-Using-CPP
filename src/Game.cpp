@@ -6,16 +6,21 @@ using namespace std;
 
 class Welcome {
     private:
+        string Name;
 
     public:
-        void printWelcome(string Name){
+        void printWelcome(){
             cout << "Hi mate." << endl;
             Sleep(1000);
             cout << "What is your Name: " << endl;
             cin >> Name;
             Sleep(2000);
-            cout << "" << endl;
+            cout << "Welcome To Tic Tac Toe " << Name  << "!"<< endl;
+            Sleep(2000);
+        }
 
+        Welcome(){
+            printWelcome();
         }
 };
 
