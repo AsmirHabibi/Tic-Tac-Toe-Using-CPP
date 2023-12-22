@@ -2,17 +2,12 @@
 #include <ctime>
 #include <Windows.h>
 
+#include "../header/Game.hpp"
+
 using namespace std;
 
-class Game {
-    private:
-        char spaces[9] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-        char player = 'X';
-        char computer = 'O';
-        bool running = true;
 
-    public:
-        void drawBoard(){
+        void Game::drawBoard(){
             cout << "     |     |     " << endl;
             cout << "  " << spaces[0] << "  |  " << spaces[1] << "  |  " << spaces[2] << "  " << endl;
             cout << "     |     |     " << endl;
@@ -25,15 +20,29 @@ class Game {
             cout << "  " << spaces[6] << "  |  " << spaces[7] << "  |  " << spaces[8] << "  " << endl;
             cout << "     |     |     " << endl;
         }
-        void Player_Move(){
 
+        void Game::Player_Move(){
+            int number;
+
+            cout << "Enter Your Number in Which you want to place your Marker to (1-9):" << endl;
+            cin >> number;
+            number--;
+        for(int i = 0; i < 9; i++){
+            if (spaces[number] = ' ')
+            {
+                spaces[number] = player;
+            }
         }
+        drawBoard();
+        }
+        
 
-};
+
 
 int main() {
     
     Game g;
     g.drawBoard();
+    g.Player_Move();
     return 0;
 }
