@@ -1,27 +1,14 @@
 #include <iostream>
-#include <Windows.h>
 #include <ctime>
+#include <Windows.h>
 
 using namespace std;
 
-class Welcome {
+class drawBoard {
     private:
-        string Name;
 
     public:
-        void printWelcome(){
-            cout << "Hi mate." << endl;
-            Sleep(1000);
-            cout << "What is your Name: " << endl;
-            cin >> Name;
-            Sleep(2000);
-            cout << "Welcome To Tic Tac Toe " << Name  << "!"<< endl;
-            Sleep(2000);
-        }
-
-        Welcome(){
-            printWelcome();
-        }
+    
 };
 
 int main() {
